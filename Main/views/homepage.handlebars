@@ -8,17 +8,17 @@
       <a href="/blog/{{blog.id}}">{{blog.name}}</a>
     </h2>
     <p>
-      <span for="img" aria-label="fox">🦊</span>
+      <span for="img" aria-label="scroll">📜 </span>
       <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount blog.needed_funding}}</span>
+      <span class="dollar-amount">{{blog.description}}</span>
       
     </p>
     <p>Created by {{blog.user.name}} on {{format_date blog.date_created}}</p>
   </div>
-  <div class="col-md-7">
+  {{!-- <div class="col-md-7">
     <p>
       {{blog.description}}
     </p>
-  </div>
+  </div> --}}
 </div>
 {{/each}}
