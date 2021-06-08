@@ -6,7 +6,7 @@ const newFormHandler = async (event) => {
   const description = document.querySelector('#project-desc').value.trim();
 
   if (name && description) {
-    const response = await fetch(`/api/projects`, {
+    const response = await fetch(`/api/blog`, {
       method: 'POST',
       body: JSON.stringify({ name, needed_funding, description }),
       headers: {
@@ -26,7 +26,7 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
+    const response = await fetch(`/api/blog/${id}`, {
       method: 'DELETE',
     });
 
@@ -44,4 +44,4 @@ document
 
 document
   .querySelector('.project-list')
-  // .addEventListener('click', delButtonHandler);
+  .addEventListener('click', delButtonHandler);
