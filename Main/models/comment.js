@@ -18,8 +18,6 @@ Comment.init(
     },
     comment: {
       type: DataTypes.STRING,
-      // type: DataTypes.ARRAY,
-      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,

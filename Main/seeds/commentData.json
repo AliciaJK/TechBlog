@@ -1,18 +1,17 @@
 [
     {
-      "date_created": "Bob the Builder",
-      "comment": "I had an issue today that I could not build the building. What a failure I am. My name states that I should be a builder.",
-      "user_id": "this is a comment",
-      "blog_id": 2
+        "comment": "This is a comment",
+        "user_id": 1,
+        "blog_id": 1
     },
     {
-      "name": "Thomas the tank engine",
-      "description": "Choo Chooo! I said, \n'CHOO CHOO\n' Choo, Choo. Thank you.",
-      "comment": "this is also a comment"
+        "comment": "This is a comment comment",
+        "user_id": 1,
+        "blog_id": 2
     },
     {
-      "name": "Barbie",
-      "description": "I am a Barbie girl, in a barbie world. Life in plastic, it is fantastic.",
-      "comment": "this is a comment too"
+        "comment": "This is a comment comment comment",
+        "user_id": 1,
+        "blog_id": 3
     }
-  ]
+]

@@ -23,11 +23,7 @@ Blog.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    comment: {
-      type: DataTypes.STRING,
-      // type: DataTypes.ARRAY,
-      allowNull: true,
-    },
+   
     user_id: {
       type: DataTypes.INTEGER,
       references: {
