@@ -25,6 +25,7 @@ Blog.init(
     },
     comment: {
       type: DataTypes.STRING,
+      // type: DataTypes.ARRAY,
       allowNull: true,
     },
     user_id: {
