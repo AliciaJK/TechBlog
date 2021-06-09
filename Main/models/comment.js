@@ -1,32 +1,48 @@
-async function commentFormHandler(event) {
-    event.preventDefault();
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-    const comment_text = document.querySelector('input[name="comment-body"]').value.trim();
+class Comment extends Model {}
 
-    const post_id = window.location.toString().split('/')[
-        window.location.toString().split('/').length - 1
-    ];
+Comment.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    comment: {
+      type: DataTypes.STRING,
+      // type: DataTypes.ARRAY,
+      allowNull: true,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
+    blog_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'blog',
+          key: 'id',
+        },
+      },
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'comment',
+  }
+);
 
-    if (comment_text) {
-        const response = await fetch('/api/comments', {
-            method: 'POST',
-            body: JSON.stringify({
-                post_id,
-                comment_text
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-
-        if (response.ok) {
-            document.location.reload();
-
-        } else {
-            alert(response.statusText);
-            document.querySelector('#comment-form').style.display = "block";
-        }
-    }
-}
-
-document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
+module.exports = Comment;
