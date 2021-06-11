@@ -16,9 +16,7 @@ Comment.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    comment: {
-      type: DataTypes.STRING,
-    },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
