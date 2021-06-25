@@ -16,7 +16,11 @@ If you have any questions, please do not hesitate to reach out at alicia.krolak4
 You can find me on GitHub as aliciajk. 
 
 # Screenshots
-![image](https://user-images.githubusercontent.com/78323646/118414396-50058c80-b672-11eb-99ca-2a96d0b2cddf.png)
+![image](https://user-images.githubusercontent.com/78323646/123352704-e5c3ef80-d52d-11eb-9fa6-50a724c3db1d.png)
+![image](https://user-images.githubusercontent.com/78323646/123352751-fecca080-d52d-11eb-84dd-580a21ec8a31.png)
+![image](https://user-images.githubusercontent.com/78323646/123352797-186de800-d52e-11eb-8956-d9f575abb045.png)
+
+
 
 ## User Story
 
